@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEFEF;
+}
+
+.barraTopo{
+    height: 110px;
+    background-color: #145873;
+    flex-direction: row;
+    display: flex;
+}
+
+.divLogo{
+    border-radius: 8px;
+    padding-left: 20px;
+}
+
+.divTitulo{
+    padding-left: 100px;
+    max-width: 200px;
+    padding-top: 34px;
+    color: white;
+}
+
+.divBotoes{
+    height: 50px;
+    padding-left: 60%;
+    padding-top: 34px;
+}
+
+.botoes{
+    color: white;
+    padding-left: 400px;
+}
+
+.hero-cadastro {
+    padding-top: 16px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEFEF;;
+}
+
+.hero-login {
+    padding-top: 16px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEFEF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #D9D9D9;
+    width: 80%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    padding: 32px;
+    font-size: 1.5em;
+}
+
+.container>input {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding: 8px;
+}
