@@ -5,16 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WeBuy - Compras em grupo</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
-    <script defer src="/__/firebase/7.2.1/firebase-app.js"></script>
+    <!-- Materialize and Material Icons -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <script defer src="/__/firebase/7.2.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.2.1/firebase-firestore.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC_7JkabvaiY9rnO2YefdItUrzMYjAsiOw",
+        authDomain: "webuy-56ebc.firebaseapp.com",
+        databaseURL: "https://webuy-56ebc.firebaseio.com",
+        projectId: "webuy-56ebc",
+        storageBucket: "webuy-56ebc.appspot.com",
+        messagingSenderId: "613921789695",
+        appId: "1:613921789695:web:066916c9991a918bb71eca",
+        measurementId: "G-GHML4EEFL5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="index.js"></script>
 </head>
 
@@ -28,28 +53,68 @@
             </div>
             <!--botoes!-->
             <div class="divBotoes">
-                <button id="btn-login">Login</button>
+                <a class="waves-effect waves-light btn" id="btn-login">Login</a>
                 <!--dar espacamento!-->
-                <button id="btn-cadastro">Cadastre-se</button>
+                <a class="waves-effect waves-light btn" id="btn-cadastro">Cadastre-se</a>
             </div>
         </div>
 
-        <div class="hero-cadastro" id="div-registro">
-            <div class="container">
-                Email: <input type="text" id="inputEmail">
-                Senha: <input type="password" id="inputPassword">
-                Nome: <input type="text" id="inputName">
-                Endereço: <input type="password" id="inputAddress">
-                Telefone: <input type="tel" id="inputTel">
-                <button type="submit" id="buttonSignIn">Cadastrar</button>
+        <div class="container" id="div-registro" style="height: 600px;">
+            <div class="container" id="div-registro2" style="margin-top: 20px; width: 920px; padding-top: 6px; background-color: #D9D9D9;">
+                <div class="container" style="background-color: #D9D9D9; height: 500px;">
+                    <h1>Cadastre-se</h1>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="inputEmail" type="text" class="validate">
+                        <label for="inputEmail">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input id="inputPassword" type="password" class="validate">
+                        <label for="inputPassword">Senha</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="inputName" type="text"class="validate">
+                        <label for="inputName">Nome</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">house</i>
+                        <input id="inputAddress" type="text" class="validate">
+                        <label for="inputAddress">Endereço</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="inputTelephone" type="tel" class="validate">
+                        <label for="inputTelephone">Telefone</label>
+                    </div>
+
+                    <button class="btn waves-effect waves-light" id="buttonSignIn" type="submit" name="action">Cadastrar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="hero-login" id="div-login">
-            <div class="container">
-                Email: <input type="text" id="inputEmailLogin">
-                Senha: <input type="password" id="inputPasswordLogin">
-                <button type="submit" id="buttonLogIn">Entrar</button>
+        <div class="container" id="div-login" style="height: 520px;">
+            <div class="container" style="margin-top: 20px; padding-top: 6px; width: 920px; background-color: #D9D9D9;">
+                <div class="container" style="background-color: #D9D9D9; height: 300px;">
+                    <h1 style="">Login</h1>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">email</i>
+                      <input id="inputEmailLogin" type="text" class="validate">
+                      <label for="inputEmailLogin">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">vpn_key</i>
+                      <input id="inputPasswordLogin" type="password" class="validate">
+                      <label for="inputPasswordLogin">Senha</label>
+                    </div>
+                    <button class="btn waves-effect waves-light" id="buttonLogIn" type="submit" name="action">Entrar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
         </div>
 
