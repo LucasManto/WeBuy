@@ -11,7 +11,7 @@ $(document).ready(() => {
 
     auth.onAuthStateChanged(user => {
         if (user && !creatingUser) {
-            redirectTo('a.html')
+            redirectTo('rooms.html')
         }
     })
 
@@ -62,7 +62,7 @@ $(document).ready(() => {
                 'activeRooms': [],
                 'pastRooms': []
             })
-            redirectTo('a.html')
+            redirectTo('rooms.html')
         } catch (error) {
             throw error
         }

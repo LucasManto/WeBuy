@@ -26,19 +26,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
     <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyC_7JkabvaiY9rnO2YefdItUrzMYjAsiOw",
-        authDomain: "webuy-56ebc.firebaseapp.com",
-        databaseURL: "https://webuy-56ebc.firebaseio.com",
-        projectId: "webuy-56ebc",
-        storageBucket: "webuy-56ebc.appspot.com",
-        messagingSenderId: "613921789695",
-        appId: "1:613921789695:web:066916c9991a918bb71eca",
-        measurementId: "G-GHML4EEFL5"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_7JkabvaiY9rnO2YefdItUrzMYjAsiOw",
+            authDomain: "webuy-56ebc.firebaseapp.com",
+            databaseURL: "https://webuy-56ebc.firebaseio.com",
+            projectId: "webuy-56ebc",
+            storageBucket: "webuy-56ebc.appspot.com",
+            messagingSenderId: "613921789695",
+            appId: "1:613921789695:web:066916c9991a918bb71eca",
+            measurementId: "G-GHML4EEFL5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
     </script>
     <script src="index.js"></script>
 </head>
@@ -60,7 +60,8 @@
         </div>
 
         <div class="container" id="div-registro" style="height: 600px;">
-            <div class="container" id="div-registro2" style="margin-top: 20px; width: 920px; padding-top: 6px; background-color: #D9D9D9;">
+            <div class="container" id="div-registro2"
+                style="margin-top: 20px; width: 920px; padding-top: 6px; background-color: #D9D9D9;">
                 <div class="container" style="background-color: #D9D9D9; height: 500px;">
                     <h1>Cadastre-se</h1>
                     <div class="input-field col s6">
@@ -76,7 +77,7 @@
 
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="inputName" type="text"class="validate">
+                        <input id="inputName" type="text" class="validate">
                         <label for="inputName">Nome</label>
                     </div>
                     <div class="input-field col s6">
@@ -102,14 +103,14 @@
                 <div class="container" style="background-color: #D9D9D9; height: 300px;">
                     <h1 style="">Login</h1>
                     <div class="input-field col s6">
-                      <i class="material-icons prefix">email</i>
-                      <input id="inputEmailLogin" type="text" class="validate">
-                      <label for="inputEmailLogin">Email</label>
+                        <i class="material-icons prefix">email</i>
+                        <input id="inputEmailLogin" type="text" class="validate">
+                        <label for="inputEmailLogin">Email</label>
                     </div>
                     <div class="input-field col s6">
-                      <i class="material-icons prefix">vpn_key</i>
-                      <input id="inputPasswordLogin" type="password" class="validate">
-                      <label for="inputPasswordLogin">Senha</label>
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input id="inputPasswordLogin" type="password" class="validate">
+                        <label for="inputPasswordLogin">Senha</label>
                     </div>
                     <button class="btn waves-effect waves-light" id="buttonLogIn" type="submit" name="action">Entrar
                         <i class="material-icons right">send</i>
@@ -122,11 +123,3 @@
 </body>
 
 </html>
-
-<!-- updateUser
-createRoom
-addParticipant
-removeParticipant
-addLink
-updateRoom
-checkout -->
