@@ -3,6 +3,18 @@ $(document).ready(() => {
     let auth = firebase.auth();
     let firestore = firebase.firestore();
 
+    let creatingUser = false
+
+    function redirectTo(url) {
+        window.location.href = url
+    }
+
+    auth.onAuthStateChanged(user => {
+        if (user && !creatingUser) {
+            redirectTo('a.html')
+        }
+    })
+
     $("#div-registro").hide();
     $("#div-login").show();
 
@@ -18,16 +30,20 @@ $(document).ready(() => {
 
     $("#buttonSignIn").click(() => {
         e.preventDefault();
-        createUser();
+        try {
+            createUser();
+        } catch (error) {
+            console.log(error)
+        }
     });
 
-    $("#buttonLogIn").click(e => {
+    $("#buttonLogIn").click(async e => {
         e.preventDefault();
 
         const email = $('#inputEmailLogin').val();
         const password = $('#inputPasswordLogin').val();
 
-        auth.signInWithEmailAndPassword(email, password);
+        await auth.signInWithEmailAndPassword(email, password);
     });
 
     async function createUser() {
@@ -37,17 +53,18 @@ $(document).ready(() => {
         const address = $('#inputAddress').val();
         const phone = $('#inputPhone').val();
 
-        authCredential = await auth.createUserWithEmailAndPassword(email, password);
-
-        firestore.doc(`users/${authCredential.user.uid}`).set({
-            'name': name,
-            'address': address,
-            'phone': phone
-        });
+        try {
+            auth.createUserWithEmailAndPassword(email, password)
+            await firestore.doc(`/users/${auth.currentUser.uid}`).set({
+                name,
+                address,
+                phone,
+                'activeRooms': [],
+                'pastRooms': []
+            })
+            redirectTo('a.html')
+        } catch (error) {
+            throw error
+        }
     }
-
-    auth.onAuthStateChanged(user => {
-        // TODO: Redirect to rooms page
-        // if (user) window.location.href = '';
-    });
 });
