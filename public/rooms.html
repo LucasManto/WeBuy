@@ -70,17 +70,17 @@
                         <label for="inputRoomName">Nome da Sala</label>
                     </div>
                     <div class="input-field col s6">
-                        <i class="material-icons prefix">link</i>
-                        <input id="inputLink" type="text" class="validate">
-                        <label for="inputLink">Link do Site</label>
+                        <i class="material-icons prefix">timer</i>
+                        <input id="inputTime" type="number" min="1" max="7" class="validate">
+                        <label for="inputTime">Dias para fechamento da compra</label>
                     </div>
 
-                        <p class="range-field">
-                            <label for="maxPart">Máximo de participantes</label>
-                            <input type="range" id="maxPart" min="1" max="20" name="maxPartSlider"/>
-                        </p>
+                    <p class="range-field">
+                        <label for="maxPart">Máximo de participantes</label>
+                        <input type="range" id="maxPart" min="1" max="20" name="maxPartSlider" />
+                    </p>
 
-                    <button class="btn waves-effect waves-light" id="buttonSignIn" type="submit" name="action">Cadastrar
+                    <button class="btn waves-effect waves-light" id="btn-signRoom" type="submit" name="action">Cadastrar
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
@@ -88,15 +88,10 @@
         </div>
 
         <div class="container" id="div-list-room">
-            <div class="container z-depth-4" id="div-salas" style="margin: 20px; width: 920px; padding-top: 10px; padding-bottom: 10px; background-color: #D9D9D9;">
+            <div class="container z-depth-4" id="div-salas"
+                style="margin: 20px; width: 920px; padding-top: 10px; padding-bottom: 10px; background-color: #D9D9D9;">
                 <div class="container" id="div-salas2" style="background-color: #D9D9D9; width: 900px; height: 100%;">
                     <h2 style="padding-left: 125px;">Salas disponíveis</h2>
-
-                    <div class="collection" id="clt-rooms">                        
-                        <!--List with all rooms-->
-                        <!--room structure below-->
-                        <!--<a href="#!" class="collection-item light-blue darken-4 white-text" style="font-weight: bold;">Netshoes<i class="material-icons" style="padding-left: 80%;">group</i><b style="padding-left: 10px;">12 / 20</b></a>-->
-                    </div>
                 </div>
             </div>
         </div>
