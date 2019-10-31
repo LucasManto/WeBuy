@@ -21,6 +21,11 @@ $(document).ready(() => {
         $("#div-list-room").show();
     });
 
+    $("#btn-signRoom").click(() => {
+        // TODO:
+        //createRoom()
+    });
+
     $("#btn-logout").click(() => {
         // TODO:
         //Logout
