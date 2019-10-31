@@ -40,7 +40,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="rooms.js"></script>
+    <script src="buy.js"></script>
 </head>
 
 <body>
@@ -53,53 +53,47 @@
             </div>
             <!--botoes!-->
             <div class="divBotoes">
-                <a class="waves-effect waves-light btn" id="btn-createRoom">Criar Sala</a>
                 <a class="waves-effect waves-light btn" id="btn-listRooms">Listar Salas</a>
                 <a class="waves-effect waves-light btn" id="btn-logout">Logout</a>
             </div>
         </div>
 
-        <div class="container" id="div-create-room" style="height: 600px;">
-            <div class="container z-depth-5" id="div-create-room2"
-                style="margin-top: 20px; width: 920px; padding-top: 6px; background-color: #D9D9D9;">
-                <div class="container" style="background-color: #D9D9D9; height: 500px;">
-                    <h1>Criar sala</h1>
+        <div class="container" id="div-addProduct">
+            <div class="container z-depth-4" id="div-add" style="margin: 20px; width: 920px; padding-top: 10px; padding-bottom: 10px; background-color: #D9D9D9;">
+                <div class="container" id="div-add2" style="background-color: #D9D9D9; width: 900px; height: 100%;">
+                    <h2 id="roomName" style="padding-left: 125px;">.</h2>
+                    
+                    <h4>Adicione um produto</h4>
                     <div class="input-field col s6">
-                        <i class="material-icons prefix">meeting_room</i>
-                        <input id="inputRoomName" type="text" class="validate">
-                        <label for="inputRoomName">Nome da Sala</label>
+                        <i class="material-icons prefix">shopping_cart</i>
+                        <input id="nomeProduto" type="text">
+                        <label for="nomeProduto">Nome do produto</label>
                     </div>
+                    
                     <div class="input-field col s6">
                         <i class="material-icons prefix">link</i>
-                        <input id="inputLink" type="text" class="validate">
-                        <label for="inputLink">Link do Site</label>
+                        <input id="urlProduto" type="text">
+                        <label for="urlProduto">URL do Produto</label>
                     </div>
 
-                        <p class="range-field">
-                            <label for="maxPart">Máximo de participantes</label>
-                            <input type="range" id="maxPart" min="1" max="20" name="maxPartSlider"/>
-                        </p>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="descProduto" class="materialize-textarea"></textarea>
+                        <label for="descProduto">Informações extras</label>
+                    </div>
 
-                    <button class="btn waves-effect waves-light" id="buttonSignIn" type="submit" name="action">Cadastrar
-                        <i class="material-icons right">send</i>
-                    </button>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">dynamic_feed</i>
+                        <input id="quantidadeProduto" type="number" value="1" style="width: 40px;" name="quantity" min="1" max="5">
+                        <label for="quantidadeProduto">Quantidade</label>
+                    </div>
+
+                    <a id="btn-addProduct" class="waves-effect waves-light btn"><i class="material-icons right">add_shopping_cart</i>Adicionar!</a>
                 </div>
             </div>
         </div>
 
-        <div class="container" id="div-list-room">
-            <div class="container z-depth-4" id="div-salas" style="margin: 20px; width: 920px; padding-top: 10px; padding-bottom: 10px; background-color: #D9D9D9;">
-                <div class="container" id="div-salas2" style="background-color: #D9D9D9; width: 900px; height: 100%;">
-                    <h2 style="padding-left: 125px;">Salas disponíveis</h2>
 
-                    <div class="collection" id="clt-rooms">                        
-                        <!--List with all rooms-->
-                        <!--room structure below-->
-                        <!--<a href="#!" class="collection-item light-blue darken-4 white-text" style="font-weight: bold;">Netshoes<i class="material-icons" style="padding-left: 80%;">group</i><b style="padding-left: 10px;">12 / 20</b></a>-->
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 
