@@ -113,7 +113,7 @@ $(document).ready(() => {
             var roomNameValue = roomId.concat("#", docReference.data().storeName, "#", docReference.data().maxParticipants, "#", docReference.data().participants.length)
 
             //var finalRoom = firstPiece.concat(docReference.data().storeName, secondPiece, "/ ", docReference.data().maxParticipants, thirdPiece)
-            var finalRoom = firstPiece.concat(roomNameValue, secondPiece, docReference.data().storeName, thirdPiece, "/ ", docReference.data().maxParticipants, forthPiece)
+            var finalRoom = firstPiece.concat(roomNameValue, secondPiece, docReference.data().storeName, thirdPiece, docReference.data().participants.length, " / ", docReference.data().maxParticipants, forthPiece)
             $("#div-salas2").append(finalRoom)
 
             // console.log(finalRoom)
