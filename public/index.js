@@ -28,7 +28,7 @@ $(document).ready(() => {
         $("#div-login").hide();
     });
 
-    $("#buttonSignIn").click(() => {
+    $("#buttonSignIn").click((e) => {
         e.preventDefault();
         try {
             createUser();
